@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+   
+
+</head>
+<body>
+    <div id="app">
+        <form id="app-form">
+            <input type="text" v-model="input_name" placeholder="Digite seu nome:"> <!--v-model é uma forma de comunicar ao vue que quero salvar alguma informação em uma parte dele (vamos conseguir gerenciar esse valor através do Vue)-->
+            <input type="submit" value="Enviar" v-on:click="submit_form"> <!--v-on:clik é uma diretiva que ativa um evento através do click-->
+        </form>
+
+
+        <p>O meu nome é: {{name}}</p>
+        <p>Data binding: {{input_name}}</p> <!--utizando o data binding, tudo que usuário digitar, é reproduzido imediatamente na aplicação-->
+        <p>A minha idade é: {{idade}}</p>
+        <p>A minha cidade é: {{cidade}}</p>
+        <p>O meu estado é: {{estado}}</p>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>
